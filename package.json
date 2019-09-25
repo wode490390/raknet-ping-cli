@@ -1,0 +1,28 @@
+{
+  "name": "raknet-ping",
+  "version": "1.0.0",
+  "description": "The Node implementation of RakNet UnconnectedPing",
+  "main": "ping.js",
+  "scripts": {
+    "start": "node ping.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wode490390/raknet-ping.git"
+  },
+  "keywords": [
+    "raknet",
+    "ping",
+    "protocol",
+    "minecraft",
+    "mcpe",
+    "mcbe",
+    "tool"
+  ],
+  "author": "wode490390",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wode490390/raknet-ping/issues"
+  },
+  "homepage": "https://github.com/wode490390/raknet-ping"
+}
