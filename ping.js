@@ -46,6 +46,13 @@ client.on('message', (msg, rinfo) => {
             switch (serverName.length) {
                 case 0:
                     break;
+                default:
+                    if (serverName.length > 12) {
+                        formatted += '  extras:\n';
+                        for (let i = 12; i < serverName.length; i++) {
+                            formatted += `    ${serverName[i]}\n`;
+                        }
+                    }
                 case 12:
                     formatted = `  ipv6 port: ${serverName[11]}\n` + formatted;
                 case 11:
@@ -70,13 +77,6 @@ client.on('message', (msg, rinfo) => {
                     formatted = `  motd: ${serverName[1]}\n` + formatted;
                 case 1:
                     formatted = `  game: ${serverName[0]}\n` + formatted;
-                default:
-                    if (serverName.length > 12) {
-                        formatted += '  extras:\n';
-                        for (let i = 12; i < serverName.length; i++) {
-                            formatted += `    ${serverName[i]}\n`;
-                        }
-                    }
             }
             console.log(`client received:\n${formatted}from ${rinfo.address}:${rinfo.port}`);
         }
